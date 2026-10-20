@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                echo 'Checking out source code from repository...'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Compiling and resolving dependencies...'
+                sh 'echo "Build Stage Completed Successfully"'
+            }
+        }
+
+        stage('Automated Test') {
+            steps {
+                echo 'Running unit and integration tests...'
+                sh 'echo "All Automated Tests Passed (100% Success)"'
+            }
+        }
+
+        stage('Package & Archive') {
+            steps {
+                echo 'Packaging application artifact...'
+                sh 'echo "Artifact packaged: app-v1.0.tar.gz"'
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Continuous Integration Pipeline run finished.'
+        }
+        success {
+            echo 'Build and Test completed successfully! Ready for deployment.'
+        }
+        failure {
+            echo 'Pipeline failed. Sending alert to developers.'
+        }
+    }
+}

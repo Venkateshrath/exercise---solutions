@@ -14,6 +14,7 @@ Welcome to the **DevOps Hands-On Exercise Series**. This directory contains prod
 | **Exercise 4** | Docker Networking | **Docker Networking with Multiple Containers**: Multi-container bridge networking (Flask API, MySQL, Redis) and DNS service discovery | [📂 `devops/exercise-4`](./exercise-4/) |
 | **Exercise 5** | Container Security | **Docker Security with AppArmor and Python**: Securing containers with AppArmor profiles, programmatic SDK enforcement, and restricted action verification | [📂 `devops/exercise-5`](./exercise-5/) |
 | **Exercise 6** | Observability & CI/CD | **Real-Time Operations Monitoring and Alerting (ZAPPTTO)**: Python Prometheus metrics exporter, Prometheus alerting rules, Grafana dashboards, and Jenkins pipeline | [📂 `devops/exercise-6`](./exercise-6/) |
+| **Exercise 7** | Continuous Integration | **Introduction to CI and Jenkins Installation**: Core CI concepts, top 10 CI tools comparison, containerized Jenkins LTS deployment, and sample pipeline | [📂 `devops/exercise-7`](./exercise-7/) |
 
 ---
 
@@ -77,17 +78,25 @@ devops/
 │   ├── deploy.ps1          # Automated deployment & security check script (PowerShell)
 │   ├── cleanup.sh          # Teardown script (Bash)
 │   └── cleanup.ps1         # Teardown script (PowerShell)
-└── exercise-6/             # Exercise 6: Real-Time Operations Monitoring & Alerting
-    ├── README.md           # Exercise 6 documentation, architecture & guide
-    ├── delivery_metrics.py # Python Prometheus metrics producer
-    ├── Dockerfile          # Container build definition
-    ├── requirements.txt    # Python dependencies (prometheus-client)
-    ├── prometheus.yml      # Prometheus configuration & scrape targets
-    ├── alert_rules.yml     # Prometheus alert rules
-    ├── Jenkinsfile         # Jenkins declarative pipeline script
-    ├── docker-compose.yml  # Unified monitoring stack orchestration
-    ├── deploy.sh           # Automated deployment & verification script (Bash)
-    ├── deploy.ps1          # Automated deployment & verification script (PowerShell)
+├── exercise-6/             # Exercise 6: Real-Time Operations Monitoring & Alerting
+│   ├── README.md           # Exercise 6 documentation, architecture & guide
+│   ├── delivery_metrics.py # Python Prometheus metrics producer
+│   ├── Dockerfile          # Container build definition
+│   ├── requirements.txt    # Python dependencies (prometheus-client)
+│   ├── prometheus.yml      # Prometheus configuration & scrape targets
+│   ├── alert_rules.yml     # Prometheus alert rules
+│   ├── Jenkinsfile         # Jenkins declarative pipeline script
+│   ├── docker-compose.yml  # Unified monitoring stack orchestration
+│   ├── deploy.sh           # Automated deployment & verification script (Bash)
+│   ├── deploy.ps1          # Automated deployment & verification script (PowerShell)
+│   ├── cleanup.sh          # Teardown script (Bash)
+│   └── cleanup.ps1         # Teardown script (PowerShell)
+└── exercise-7/             # Exercise 7: Introduction to CI & Jenkins Installation
+    ├── README.md           # Exercise 7 documentation, CI concepts & guide
+    ├── Jenkinsfile         # Sample starter declarative CI pipeline
+    ├── docker-compose.yml  # Jenkins server orchestration manifest
+    ├── deploy.sh           # Automated deployment & password extraction (Bash)
+    ├── deploy.ps1          # Automated deployment & password extraction (PowerShell)
     ├── cleanup.sh          # Teardown script (Bash)
     └── cleanup.ps1         # Teardown script (PowerShell)
 ```
