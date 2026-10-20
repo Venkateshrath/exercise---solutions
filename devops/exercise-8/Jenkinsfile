@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Execute Script') {
+            steps {
+                echo 'Running hello-world.sh...'
+                sh 'sh devops/exercise-8/hello-world.sh || sh hello-world.sh'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'HelloWorld Jenkins job completed successfully!'
+        }
+        failure {
+            echo 'HelloWorld Jenkins job failed.'
+        }
+    }
+}

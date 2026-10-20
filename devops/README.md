@@ -15,6 +15,7 @@ Welcome to the **DevOps Hands-On Exercise Series**. This directory contains prod
 | **Exercise 5** | Container Security | **Docker Security with AppArmor and Python**: Securing containers with AppArmor profiles, programmatic SDK enforcement, and restricted action verification | [📂 `devops/exercise-5`](./exercise-5/) |
 | **Exercise 6** | Observability & CI/CD | **Real-Time Operations Monitoring and Alerting (ZAPPTTO)**: Python Prometheus metrics exporter, Prometheus alerting rules, Grafana dashboards, and Jenkins pipeline | [📂 `devops/exercise-6`](./exercise-6/) |
 | **Exercise 7** | Continuous Integration | **Introduction to CI and Jenkins Installation**: Core CI concepts, top 10 CI tools comparison, containerized Jenkins LTS deployment, and sample pipeline | [📂 `devops/exercise-7`](./exercise-7/) |
+| **Exercise 8** | Jenkins Automation | **Creating "Hello World" Jenkins Job**: Shell script execution via Git SCM, Freestyle project build configuration, and console output verification | [📂 `devops/exercise-8`](./exercise-8/) |
 
 ---
 
@@ -91,12 +92,19 @@ devops/
 │   ├── deploy.ps1          # Automated deployment & verification script (PowerShell)
 │   ├── cleanup.sh          # Teardown script (Bash)
 │   └── cleanup.ps1         # Teardown script (PowerShell)
-└── exercise-7/             # Exercise 7: Introduction to CI & Jenkins Installation
-    ├── README.md           # Exercise 7 documentation, CI concepts & guide
-    ├── Jenkinsfile         # Sample starter declarative CI pipeline
-    ├── docker-compose.yml  # Jenkins server orchestration manifest
-    ├── deploy.sh           # Automated deployment & password extraction (Bash)
-    ├── deploy.ps1          # Automated deployment & password extraction (PowerShell)
-    ├── cleanup.sh          # Teardown script (Bash)
-    └── cleanup.ps1         # Teardown script (PowerShell)
+├── exercise-7/             # Exercise 7: Introduction to CI & Jenkins Installation
+│   ├── README.md           # Exercise 7 documentation, CI concepts & guide
+│   ├── Jenkinsfile         # Sample starter declarative CI pipeline
+│   ├── docker-compose.yml  # Jenkins server orchestration manifest
+│   ├── deploy.sh           # Automated deployment & password extraction (Bash)
+│   ├── deploy.ps1          # Automated deployment & password extraction (PowerShell)
+│   ├── cleanup.sh          # Teardown script (Bash)
+│   └── cleanup.ps1         # Teardown script (PowerShell)
+└── exercise-8/             # Exercise 8: Creating "Hello World" Jenkins Job
+    ├── README.md           # Exercise 8 documentation, job config & guide
+    ├── hello-world.sh      # Bash script executed by Jenkins build step
+    ├── hello-world.ps1     # PowerShell equivalent for Windows environments
+    ├── Jenkinsfile         # Pipeline as Code specification
+    ├── test_job.sh         # Local verification test script (Bash)
+    └── test_job.ps1        # Local verification test script (PowerShell)
 ```
