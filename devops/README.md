@@ -17,6 +17,7 @@ Welcome to the **DevOps Hands-On Exercise Series**. This directory contains prod
 | **Exercise 7** | Continuous Integration | **Introduction to CI and Jenkins Installation**: Core CI concepts, top 10 CI tools comparison, containerized Jenkins LTS deployment, and sample pipeline | [📂 `devops/exercise-7`](./exercise-7/) |
 | **Exercise 8** | Jenkins Automation | **Creating "Hello World" Jenkins Job**: Shell script execution via Git SCM, Freestyle project build configuration, and console output verification | [📂 `devops/exercise-8`](./exercise-8/) |
 | **Exercise 9** | CI/CD Pipelines | **Jenkins Multi-Stage Pipeline: Deploying a Python Application**: End-to-end 5-stage declarative pipeline (Build, Test, Deploy, Run App, Test App) with unit testing and process tracking | [📂 `devops/exercise-9`](./exercise-9/) |
+| **Exercise 10** | Kubernetes (K8s) | **Multi-Node Kubernetes Cluster with Multiple Applications and ReplicaSets**: Product Catalog (2 replicas) & Shopping Cart (3 replicas) across 3 Minikube nodes with Pod Anti-Affinity | [📂 `devops/exercise-10`](./exercise-10/) |
 
 ---
 
@@ -108,15 +109,30 @@ devops/
 │   ├── Jenkinsfile         # Pipeline as Code specification
 │   ├── test_job.sh         # Local verification test script (Bash)
 │   └── test_job.ps1        # Local verification test script (PowerShell)
-└── exercise-9/             # Exercise 9: Jenkins Multi-Stage Pipeline
-    ├── README.md           # Exercise 9 documentation, architecture & guide
-    ├── app.py              # Python Flask application
-    ├── test_app.py         # Unit test suite using unittest
-    ├── requirements.txt    # Python dependencies (Flask, flake8)
-    ├── Jenkinsfile         # 5-stage declarative CI/CD pipeline
-    ├── Dockerfile          # Container build definition
-    ├── deploy.sh           # Automated local pipeline simulation (Bash)
-    ├── deploy.ps1          # Automated local pipeline simulation (PowerShell)
+├── exercise-9/             # Exercise 9: Jenkins Multi-Stage Pipeline
+│   ├── README.md           # Exercise 9 documentation, architecture & guide
+│   ├── app.py              # Python Flask application
+│   ├── test_app.py         # Unit test suite using unittest
+│   ├── requirements.txt    # Python dependencies (Flask, flake8)
+│   ├── Jenkinsfile         # 5-stage declarative CI/CD pipeline
+│   ├── Dockerfile          # Container build definition
+│   ├── deploy.sh           # Automated local pipeline simulation (Bash)
+│   ├── deploy.ps1          # Automated local pipeline simulation (PowerShell)
+│   ├── cleanup.sh          # Teardown script (Bash)
+│   └── cleanup.ps1         # Teardown script (PowerShell)
+└── exercise-10/            # Exercise 10: Multi-Node K8s Cluster with Anti-Affinity
+    ├── README.md           # Exercise 10 documentation, architecture & guide
+    ├── product_catalog.py  # Flask AppA - Product Catalog service
+    ├── shopping_cart.py    # Flask AppB - Shopping Cart service
+    ├── requirements.txt    # Python dependencies (Flask)
+    ├── Dockerfile.product  # Dockerfile for Product Catalog
+    ├── Dockerfile.shopping # Dockerfile for Shopping Cart
+    ├── product_catalog_deployment.yaml # K8s Deployment (2 replicas + Anti-Affinity)
+    ├── shopping_cart_deployment.yaml   # K8s Deployment (3 replicas + Anti-Affinity)
+    ├── product_catalog_service.yaml    # NodePort Service for Product Catalog
+    ├── shopping_cart_service.yaml      # NodePort Service for Shopping Cart
+    ├── deploy.sh           # Automated deployment script (Bash)
+    ├── deploy.ps1          # Automated deployment script (PowerShell)
     ├── cleanup.sh          # Teardown script (Bash)
     └── cleanup.ps1         # Teardown script (PowerShell)
 ```
