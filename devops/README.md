@@ -13,6 +13,7 @@ Welcome to the **DevOps Hands-On Exercise Series**. This directory contains prod
 | **Exercise 3** | Kubernetes (K8s) | **Scaling Flask App on Single Node using ReplicaSets**: High-concurrency flash sale simulation, horizontal pod scaling, and self-healing | [📂 `devops/exercise-3`](./exercise-3/) |
 | **Exercise 4** | Docker Networking | **Docker Networking with Multiple Containers**: Multi-container bridge networking (Flask API, MySQL, Redis) and DNS service discovery | [📂 `devops/exercise-4`](./exercise-4/) |
 | **Exercise 5** | Container Security | **Docker Security with AppArmor and Python**: Securing containers with AppArmor profiles, programmatic SDK enforcement, and restricted action verification | [📂 `devops/exercise-5`](./exercise-5/) |
+| **Exercise 6** | Observability & CI/CD | **Real-Time Operations Monitoring and Alerting (ZAPPTTO)**: Python Prometheus metrics exporter, Prometheus alerting rules, Grafana dashboards, and Jenkins pipeline | [📂 `devops/exercise-6`](./exercise-6/) |
 
 ---
 
@@ -64,16 +65,29 @@ devops/
 │   ├── deploy.ps1          # Automated setup, container run & connectivity test (PowerShell)
 │   ├── cleanup.sh          # Teardown script (Bash)
 │   └── cleanup.ps1         # Teardown script (PowerShell)
-└── exercise-5/             # Exercise 5: Docker Security with AppArmor and Python
-    ├── README.md           # Exercise 5 documentation, walkthrough & Q&A
-    ├── app.py              # Secured Flask application
+├── exercise-5/             # Exercise 5: Docker Security with AppArmor and Python
+│   ├── README.md           # Exercise 5 documentation, walkthrough & Q&A
+│   ├── app.py              # Secured Flask application
+│   ├── Dockerfile          # Container build definition
+│   ├── requirements.txt    # Python dependencies (Flask, Docker SDK)
+│   ├── my-apparmor-profile # AppArmor Mandatory Access Control profile
+│   ├── apply_apparmor.py   # Python Docker SDK profile enforcement script
+│   ├── test_restricted_actions.py # Python test script for restricted operations
+│   ├── deploy.sh           # Automated deployment & security check script (Bash)
+│   ├── deploy.ps1          # Automated deployment & security check script (PowerShell)
+│   ├── cleanup.sh          # Teardown script (Bash)
+│   └── cleanup.ps1         # Teardown script (PowerShell)
+└── exercise-6/             # Exercise 6: Real-Time Operations Monitoring & Alerting
+    ├── README.md           # Exercise 6 documentation, architecture & guide
+    ├── delivery_metrics.py # Python Prometheus metrics producer
     ├── Dockerfile          # Container build definition
-    ├── requirements.txt    # Python dependencies (Flask, Docker SDK)
-    ├── my-apparmor-profile # AppArmor Mandatory Access Control profile
-    ├── apply_apparmor.py   # Python Docker SDK profile enforcement script
-    ├── test_restricted_actions.py # Python test script for restricted operations
-    ├── deploy.sh           # Automated deployment & security check script (Bash)
-    ├── deploy.ps1          # Automated deployment & security check script (PowerShell)
+    ├── requirements.txt    # Python dependencies (prometheus-client)
+    ├── prometheus.yml      # Prometheus configuration & scrape targets
+    ├── alert_rules.yml     # Prometheus alert rules
+    ├── Jenkinsfile         # Jenkins declarative pipeline script
+    ├── docker-compose.yml  # Unified monitoring stack orchestration
+    ├── deploy.sh           # Automated deployment & verification script (Bash)
+    ├── deploy.ps1          # Automated deployment & verification script (PowerShell)
     ├── cleanup.sh          # Teardown script (Bash)
     └── cleanup.ps1         # Teardown script (PowerShell)
 ```
