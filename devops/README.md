@@ -16,6 +16,7 @@ Welcome to the **DevOps Hands-On Exercise Series**. This directory contains prod
 | **Exercise 6** | Observability & CI/CD | **Real-Time Operations Monitoring and Alerting (ZAPPTTO)**: Python Prometheus metrics exporter, Prometheus alerting rules, Grafana dashboards, and Jenkins pipeline | [📂 `devops/exercise-6`](./exercise-6/) |
 | **Exercise 7** | Continuous Integration | **Introduction to CI and Jenkins Installation**: Core CI concepts, top 10 CI tools comparison, containerized Jenkins LTS deployment, and sample pipeline | [📂 `devops/exercise-7`](./exercise-7/) |
 | **Exercise 8** | Jenkins Automation | **Creating "Hello World" Jenkins Job**: Shell script execution via Git SCM, Freestyle project build configuration, and console output verification | [📂 `devops/exercise-8`](./exercise-8/) |
+| **Exercise 9** | CI/CD Pipelines | **Jenkins Multi-Stage Pipeline: Deploying a Python Application**: End-to-end 5-stage declarative pipeline (Build, Test, Deploy, Run App, Test App) with unit testing and process tracking | [📂 `devops/exercise-9`](./exercise-9/) |
 
 ---
 
@@ -100,11 +101,22 @@ devops/
 │   ├── deploy.ps1          # Automated deployment & password extraction (PowerShell)
 │   ├── cleanup.sh          # Teardown script (Bash)
 │   └── cleanup.ps1         # Teardown script (PowerShell)
-└── exercise-8/             # Exercise 8: Creating "Hello World" Jenkins Job
-    ├── README.md           # Exercise 8 documentation, job config & guide
-    ├── hello-world.sh      # Bash script executed by Jenkins build step
-    ├── hello-world.ps1     # PowerShell equivalent for Windows environments
-    ├── Jenkinsfile         # Pipeline as Code specification
-    ├── test_job.sh         # Local verification test script (Bash)
-    └── test_job.ps1        # Local verification test script (PowerShell)
+├── exercise-8/             # Exercise 8: Creating "Hello World" Jenkins Job
+│   ├── README.md           # Exercise 8 documentation, job config & guide
+│   ├── hello-world.sh      # Bash script executed by Jenkins build step
+│   ├── hello-world.ps1     # PowerShell equivalent for Windows environments
+│   ├── Jenkinsfile         # Pipeline as Code specification
+│   ├── test_job.sh         # Local verification test script (Bash)
+│   └── test_job.ps1        # Local verification test script (PowerShell)
+└── exercise-9/             # Exercise 9: Jenkins Multi-Stage Pipeline
+    ├── README.md           # Exercise 9 documentation, architecture & guide
+    ├── app.py              # Python Flask application
+    ├── test_app.py         # Unit test suite using unittest
+    ├── requirements.txt    # Python dependencies (Flask, flake8)
+    ├── Jenkinsfile         # 5-stage declarative CI/CD pipeline
+    ├── Dockerfile          # Container build definition
+    ├── deploy.sh           # Automated local pipeline simulation (Bash)
+    ├── deploy.ps1          # Automated local pipeline simulation (PowerShell)
+    ├── cleanup.sh          # Teardown script (Bash)
+    └── cleanup.ps1         # Teardown script (PowerShell)
 ```
