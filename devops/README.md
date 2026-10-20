@@ -10,6 +10,7 @@ Welcome to the **DevOps Hands-On Exercise Series**. This directory contains prod
 |:---:|:---|:---|:---:|
 | **Exercise 1** | Kubernetes (K8s) | **Hello Pod**: Deploying Zepto Storefront (Nginx) as a Pod and exposing via NodePort Service | [📂 `devops/exercise-1`](./exercise-1/) |
 | **Exercise 2** | Kubernetes (K8s) | **Deploy Flask App on Minikube**: Building Python Flask image locally and deploying via Deployment & Service manifests | [📂 `devops/exercise-2`](./exercise-2/) |
+| **Exercise 3** | Kubernetes (K8s) | **Scaling Flask App on Single Node using ReplicaSets**: High-concurrency flash sale simulation, horizontal pod scaling, and self-healing | [📂 `devops/exercise-3`](./exercise-3/) |
 
 ---
 
@@ -29,14 +30,26 @@ devops/
 │   ├── cleanup.sh          # Teardown script (Bash)
 │   ├── cleanup.ps1         # Teardown script (PowerShell)
 │   └── k8s-exercise-1.jpg  # Architecture diagram
-└── exercise-2/             # Exercise 2: Flask App on Minikube
-    ├── README.md           # Exercise 2 documentation & Q&A
-    ├── app.py              # Flask web application
+├── exercise-2/             # Exercise 2: Flask App on Minikube
+│   ├── README.md           # Exercise 2 documentation & Q&A
+│   ├── app.py              # Flask web application
+│   ├── Dockerfile          # Container build definition
+│   ├── requirements.txt    # Python dependencies
+│   ├── flask-deployment.yaml # Deployment and NodePort Service manifests
+│   ├── deploy.sh           # Automated deployment script (Bash)
+│   ├── deploy.ps1          # Automated deployment script (PowerShell)
+│   ├── cleanup.sh          # Teardown script (Bash)
+│   └── cleanup.ps1         # Teardown script (PowerShell)
+└── exercise-3/             # Exercise 3: Scaling Flask App using ReplicaSets
+    ├── README.md           # Exercise 3 documentation, walkthrough & Q&A
+    ├── app.py              # Flash sale Flask application
+    ├── ex3-flash-sale.py   # Compatibility entry point
     ├── Dockerfile          # Container build definition
-    ├── requirements.txt    # Python dependencies
-    ├── flask-deployment.yaml # Deployment and NodePort Service manifests
-    ├── deploy.sh           # Automated deployment script (Bash)
-    ├── deploy.ps1          # Automated deployment script (PowerShell)
+    ├── requirements.txt    # Python dependencies (Flask, Gunicorn)
+    ├── flashsale-replicaset.yaml # ReplicaSet & Service manifests
+    ├── flashsale-deployment.yaml # Additional challenge: Deployment manifest
+    ├── deploy.sh           # Automated deployment & scaling script (Bash)
+    ├── deploy.ps1          # Automated deployment & scaling script (PowerShell)
     ├── cleanup.sh          # Teardown script (Bash)
     └── cleanup.ps1         # Teardown script (PowerShell)
 ```
